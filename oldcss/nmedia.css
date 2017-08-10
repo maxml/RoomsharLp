@@ -1,0 +1,329 @@
+#nmain {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+
+.nsidebar {
+    margin-left: -20px;
+    max-width: 430px;
+    width: 30%;
+    position: inherit;
+    max-height: 100% !important;
+    height: 1500px;
+    float: left;
+    background: #fff;
+    display: block;
+}
+
+#nsidebarblock {
+    margin: 0px;
+    padding-top: 111px;
+    background-color: #fff;
+    text-align: center;
+    height: 100%;
+    max-width: 420px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
+    -o-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
+}
+
+.title {
+    font-weight: bold;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-size: 28px;
+    margin-left: 9px;
+}
+
+#nmain-container {
+    max-width: 960px;
+    width: 68%;
+    float: right
+}
+
+#nnav {
+    border-top: 1px solid #ccc;
+    max-width: 370px;
+    /*   width: 380px;*/
+    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
+    bottom: 0px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1000;
+    overflow: auto;
+}
+
+#nnav .links li {
+    /*float: left;*/
+    padding-left: 8px;
+}
+
+#nnav a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 11px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.logo {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    padding: 0px;
+    margin: 25px auto;
+    padding-bottom: 60px;
+    background-image: url("../assets/everest-logo-large.png");
+    background-repeat: no-repeat;
+}
+
+#download-app-container .download-app-button {
+    width: 229px;
+    height: 61px;
+    display: block;
+    cursor: pointer;
+    margin: auto;
+}
+
+#iphone-container #iphone-window {
+    margin-top: 60px;
+    display: block;
+    width: 380px;
+    height: 743px;
+    float: left;
+}
+
+#iphone-container #iphone-window #app-screenshot {
+    display: block;
+    width: 320px;
+    height: 480px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 132px;
+    left: 32px
+}
+
+.sub-text {
+    font-size: 12px !important
+}
+
+@media (min-width: 1200px) {
+    .nsidebar {
+        overflow: hidden;
+    }
+
+}
+
+/* Sidebar in top, Phone + slider = 2 columns */
+@media (min-width: 780px) and (max-width: 1199px) {
+    body {
+        overflow: scroll;
+        margin: 0;
+        padding: 0
+    }
+
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .nsidebar {
+        width: 100% !important;
+        max-width: 100%;
+        display: block;
+        margin-top: 0;
+    }
+
+    .nsidebar {
+        height: 180px;
+        margin-left: 0;
+        padding: 0
+    }
+
+    .sidebar-content {
+        width: 75%;
+        float: left
+    }
+
+    .logo {
+        width: 200px;
+        margin: 10px 20px;
+        padding: 10px
+    }
+
+    .title {
+        font-size: 22px
+    }
+
+    #nnav {
+        max-width: 20%;
+        float: right;
+        position: relative;
+        margin-top: 0;
+        border-top: none
+    }
+
+    #nnav .links {
+        float: none;
+        font-size: 12px;
+    }
+
+    #nnav a {
+        position: inherit;
+        float: left
+    }
+
+    #nsidebarblock {
+        padding-top: 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        background: #fff;
+        border: 0;
+        display: block
+    }
+
+    #block1 {
+        display: block;
+        width: 48%;
+        float: left;
+        margin-top: 0
+    }
+
+    #block2 {
+        display: block;
+        width: 48%;
+        float: right;
+        margin-top: 0
+    }
+
+    #download-app-container {
+        margin: 5px auto
+    }
+
+    #download-app-container .download-app-button {
+        max-width: 229px;
+        width: auto
+    }
+
+    #nmain-container {
+        width: 90% !important;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        height: 700px;
+        overflow: hidden;
+        padding: 10px 30px;
+    }
+}
+
+/* Sidebar, Phone, slider = 1 column */
+@media (min-width: 481px) and (max-width: 779px) {
+    body {
+        overflow: scroll;
+    }
+
+    body, .container-fluid, #nmain, #nmain-container {
+        width: 100% !important
+    }
+
+    .nsidebar {
+        overflow: auto;
+        height: auto;
+        clear: both;
+        width: 420px;
+        margin: 0 auto
+    }
+
+    #nsidebarblock {
+        margin: auto
+    }
+
+    #nmain-container {
+        overflow: hidden;
+    }
+
+    #iphone-container {
+        display: inline; /*max-width:100%!important;*/
+        clear: both
+    }
+
+    #iphone-container #iphone-window, #slider-code {
+        margin: auto;
+        width: 380px;
+        margin: 20px auto
+    }
+
+    #nnav {
+        position: relative
+    }
+
+    #slider-code .overview li .dotted-line {
+        display: none
+    }
+
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow: scroll;
+    }
+
+    body, .container-fluid, #nmain, .nsidebar, #nmain-container {
+        width: 100% !important
+    }
+
+    .nsidebar {
+        overflow: auto;
+        height: auto;
+        width: 100%;
+        clear: both
+    }
+
+    #iphone-container {
+        display: inline;
+        max-width: 100% !important;
+        clear: both;
+        margin-top: 25px;
+        width: 380px !important;
+        margin: auto !important;
+        float: none
+    }
+
+    #iphone-container, #iphone-container #iphone-window {
+        z-index: 9999 !important
+    }
+
+    #iphone-container #iphone-window, #slider-code {
+        max-width: 90%;
+        margin: auto
+    }
+
+    #nnav {
+        position: relative
+    }
+
+    #slider-code, #slider-code .viewport, ul.overview, ul.overview #callouts {
+        z-index: 99 !important;
+    }
+
+    #slider-code .overview li .dotted-line {
+        display: none
+    }
+
+    ul.overview #callouts {
+        height: 350px !important;
+    }
+
+}

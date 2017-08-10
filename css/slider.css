@@ -1,0 +1,190 @@
+.slider-code {
+    margin-left: 34px;
+    height: 145px;
+    float: left
+}
+
+.viewport {
+    width: 340px;
+    height: 125px;
+    overflow: visible;
+    position: relative;
+    float: left
+}
+
+.disable {
+    visibility: hidden
+}
+
+.overview {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 20px;
+    top: 230px
+}
+
+.overview .pusher {
+    display: block;
+    height: 300px
+}
+
+.callout[data-index='0'] .dotted-line {
+    background-image: url("../assets/img/line-screen0.png");
+    width: 86px;
+    height: 12px;
+    left: -102px;
+    top: 69px
+}
+
+.callout[data-index='1'] .dotted-line {
+    background-image: url("../assets/img/line-screen1.png");
+    width: 79px;
+    height: 94px;
+    left: -94px;
+    top: 278px
+}
+
+.callout[data-index='2'] .dotted-line {
+    background-image: url("../assets/img/line-screen2.png");
+    width: 82px;
+    height: 54px;
+    left: -97px;
+    top: 432px
+}
+
+.callout[data-index='3'] .dotted-line {
+    background-image: url("../assets/img/line-screen3.png");
+    width: 81px;
+    height: 115px;
+    left: -95px;
+    top: 688px
+}
+
+.callout {
+    height: 155px;
+    width: 306px;
+    text-align: left;
+    background: #fff;
+    opacity: 0.5;
+    margin-bottom: 60px;
+    cursor: pointer;
+    overflow: visible;
+    padding-top: 35px;
+    -webkit-box-shadow: 1px 1px 1px #666;
+    -moz-box-shadow: 1px 1px 1px #666;
+    -o-box-shadow: 1px 1px 1px #666;
+    box-shadow: 1px 1px 1px #666
+}
+
+.dotted-line {
+    display: none
+}
+
+.callout.last .text {
+    text-align: center;
+    padding-left: 45px
+}
+
+.callouti.last .text .sub-text {
+    width: 215px;
+    margin-top: -10px
+}
+
+.callout.last .icon {
+    float: none;
+    left: 0px;
+    top: 0px;
+    margin: auto
+}
+
+.callout.active {
+    background-color: #fff;
+    opacity: 1
+}
+
+.callout.active .dotted-line {
+    display: block;
+    visibility: visible;
+    position: absolute;
+    z-index: 10
+}
+
+.callout .text {
+    float: left;
+    width: 235px;
+    padding-left: 10px
+}
+
+.callout .main-text {
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 16px
+}
+
+.callout .sub-text {
+    color: #666
+}
+
+.callout .icon {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    position: relative;
+    float: left;
+    position: relative;
+    opacity: 1;
+    left: -17px;
+    top: 20px
+}
+
+.callout .icon.challenge {
+    background-image: url("../assets/img/challenge.png")
+}
+
+.callout .icon.dream {
+    background-image: url("../assets/img/dream.png")
+}
+
+.callout .icon.moment {
+    background-image: url("../assets/img/moment.png")
+}
+
+.callout .icon.note {
+    background-image: url("../assets/img/note.png")
+}
+
+.callout .icon.people {
+    background-image: url("../assets/img/people.png")
+}
+
+.callout .icon.step {
+    background-image: url("../assets/img/step.png")
+}
+
+.callout .icon.everest {
+    background-image: url("../assets/logomark.png")
+}
+
+.action-pager {
+    margin-top: 239px;
+    list-style: none;
+    float: left
+}
+
+.pagenum {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #fff;
+    margin-bottom: 11px;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important
+}
+
+.pagenum.active {
+    background-color: #fff
+}

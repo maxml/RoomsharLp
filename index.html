@@ -1,212 +1,169 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8"/>
+    <title>Zahata - Help in finding neighbors</title>
+    <link rel="shortcut icon" href="assets/favicon.png"/>
+    <link rel="apple-touch-icon" href="assets/appleicon.png"/>
+    <meta name="description"
+          content="Everest is an iPhone app that helps you live your dreams and achieve personal goals.  Everyone's got their Everest.  Climb yours."/>
+    <meta name="author" content="Everest">
+    <meta name="copyright" content="©2013 Everest Inc.">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.75, maximum-scale=0.8">
+    <meta name="apple-itunes-app" content="app-id=581016826">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-<title>Zahata - Help in finding neighbors</title>
-<link href='assets/favicon.png' rel='shortcut icon'>
-<link href='assets/appleicon.png' rel='apple-touch-icon'>
-<meta content="Everest is an iPhone app that helps you live your dreams and achieve personal goals.  Everyone's got their Everest.  Climb yours." name='description'>
-<meta content='Everest' name='author'>
-<meta content='©2013 Everest Inc.' name='copyright'>
-<meta content='index,follow' name='robots'>
-<meta content='width=device-width, minimum-scale=0.75, maximum-scale=0.8' name='viewport'>
-<meta content='app-id=581016826' name='apple-itunes-app'>
-<meta content='yes' name='apple-mobile-web-app-capable'>
-<meta content='black' name='apple-mobile-web-app-status-bar-style'>
-
-<link href="css/oldcss.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="css/nmedia.css" media="screen" rel="stylesheet" type="text/css" />
-<meta content="authenticity_token" name="csrf-param" />
-<meta content="FAQ14pVYjgBQABXplaYz/MIW47DH62/Q3bY8OEmdfJI=" name="csrf-token" />
+    <link rel="stylesheet" href="css/modal.css"/>
+    <link rel="stylesheet" href="css/slider.css"/>
+    <link rel="stylesheet" href="css/nmedia.css"/>
+    <meta name="csrf-param" content="authenticity_token"/>
+    <meta name="csrf-token" content="FAQ14pVYjgBQABXplaYz/MIW47DH62/Q3bY8OEmdfJI="/>
 </head>
 <body>
 
-<div id='nmain'>
-<div class='modal hide fade' id='international-modal'>
-<div class='modal-header'>
-<a class='close' data-dismiss='modal'>
-<img alt="X" src="assets/img/x.png" />
-</a>
-</div>
-<div class='modal-body'>
-<div class='title' id='international-title'>
-Be the first to know when we launch in your country!
-</div>
+<div class="nmain">
+    <div class="modal hide fade" id="international-modal">
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">
+                <img alt="X" src="assets/img/x.png"/>
+            </a>
+        </div>
+        <div class="modal-body">
+            <div class="title">
+                Be the first to know when we launch in your country!
+            </div>
+        </div>
+    </div>
+    <div class="nsidebar">
+        <div class="sidebar-content">
+            <div class="title-block">
+                <div class="logo"></div>
+            </div>
+            <div class="download-block">
+                <div class="title">
+                    Live your dreams:
+                </div>
+                <div class="download-app-container">
+                    <a href="http://everest.com/appstore" target="_new">
+                        <div class="download-app-button"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="nnav">
+                <div class="international-link">
+                    <a class="notified-link" id="notified-link">
+                        Get notified
+                    </a>
+                    when we launch in your country
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nmain-container">
+        <div class="iphone-container">
+            <div class="iphone-window">
+                <div class="app-screenshot" id="app-screenshot">
+                    <div>
+                        <img src="assets/img/screenshot1.png">
+                    </div>
+                    <div class="hidden">
+                        <img src="assets/img/screenshot2.png">
+                    </div>
+                    <div class="hidden">
+                        <img src="assets/img/screenshot3.png">
+                    </div>
+                    <div class="hidden">
+                        <img src="assets/img/screenshot4.png">
+                    </div>
+                    <div class="hidden">
+                        <img src="assets/img/screenshot5.png">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</div>
-</div>
-<div class='container-fluid'>
-<!--<div class='row'>-->
-<div class='nsidebar'>
-<div id='nsidebarblock'>
-<div class='sidebar-content'>
-<div id="block1"><div class='logo'></div>
-<div class='title hidden'>
-Live your dreams:
-</div></div>
-
-<div class='launch-form hidden' id='launch-signup'>
-
-<div class='launch-signup-form-feedback'></div>
-</div>
-<div class='launch-form hidden' id='launch-sms'>
-
-<div class='launch-signup-form-feedback'></div>
-</div>
-<div id="block2"><div id='download-app-container'>
-<a href='http://everest.com/appstore' target='_new'>
-<div class='download-app-button'></div>
-</a>
-</div>
-<div id='international-link'>
-<a id='notified-link'>
-Get notified
-</a>
-when we launch in your country
-</div>
-</div></div>
-<div id="nnav">
-<div class='nav-content hidden'>
-<ul class='links'>
-<li><a href='http://everest.com/about'>
-About
-</a></li>
-<li><a href='http://everest.com/opportunities'>
-Opportunities
-</a></li>
-<li><a href='http://everest.com/journal' target='_new'>
-Journal
-</a></li>
-</ul>
-<div class='social'>
-<a class='twitter' href='http://everest.com/twitter' target='_new'></a>
-<a class='pinterest' href='http://everest.com/pinterest' target='_new'></a>
-<a class='facebook' href='http://everest.com/facebook' target='_new'></a>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-<div id='nmain-container'>
-<div id='iphone-container'>
-<div id='iphone-window'>
-<div id='app-screenshot'>
-<div>
-<img src='assets/img/screenshot1.png'>
-</div>
-<div class='hidden'>
-<img src='assets/img/screenshot2.png'>
-</div>
-<div class='hidden'>
-<img src='assets/img/screenshot3.png'>
-</div>
-<div class='hidden'>
-<img src='assets/img/screenshot4.png'>
-</div>
-<div class='hidden'>
-<img src='assets/img/screenshot5.png'>
-</div>
-</div>
-</div>
-</div>
-
-<div id='slider-code'>
-<div class='viewport'>
-<ul class='overview' id='callouts'>
-<li class='callout' data-index='0'>
-<div class='icon dream'></div>
-<div class='text'>
-<div class='main-text'>
-Focus on what matters
-</div>
-<div class='sub-text'>
-Make the things you want to do, learn and see a part of your everyday life.
-</div>
-</div>
-<div class='dotted-line'></div>
-</li>
-<li class='callout' data-index='1'>
-<div class='icon step'></div>
-<div class='text'>
-<div class='main-text'>
-Keep taking the next step
-</div>
-<div class='sub-text'>
-Easily plan your steps, receive reminders and get unstuck when you're not sure what to do next.
-</div>
-</div>
-<div class='dotted-line'></div>
-</li>
-<li class='callout' data-index='2'>
-<div class='icon moment'></div>
-<div class='text'>
-<div class='main-text'>
-Beautifully capture your journey
-</div>
-<div class='sub-text'>
-Weave together all the steps, moments, lessons, and people who've inspired you along the way.
-</div>
-</div>
-<div class='dotted-line'></div>
-</li>
-<li class='callout' data-index='3'>
-<div class='icon people'></div>
-<div class='text'>
-<div class='main-text'>
-Inspire and learn from others
-</div>
-<div class='sub-text'>
-Collectively learn and be inspired by one another. Copy the steps others have taken on a similar path.
-</div>
-</div>
-<div class='dotted-line'></div>
-</li>
-<li class='callout last' data-index='4'>
-<div class='icon everest'></div>
-<div class='text'>
-<div class='main-text'>
-Everyone's got their Everest.
-</div>
-<div class='sub-text'>
-Climb yours.
-</div>
-</div>
-</li>
-</ul>
-</div>
-<ul class='action-pager'>
-<li>
-<a class='pagenum' href='#' rel='0'></a>
-<a class='pagenum' href='#' rel='1'></a>
-<a class='pagenum' href='#' rel='2'></a>
-<a class='pagenum' href='#' rel='3'></a>
-<a class='pagenum' href='#' rel='4'></a>
-</li>
-</ul>
-<a class='buttons prev' href='#'>
-up
-</a>
-<a class='buttons next' href='#'>
-down
-</a>
-</div>
-</div>
-<!--</div>-->
-</div>
+        <div class="slider-code" id="slider-code">
+            <div class="viewport">
+                <ul class="overview">
+                    <li class="callout" data-index="0">
+                        <div class="icon dream"></div>
+                        <div class="text">
+                            <div class="main-text">
+                                Focus on what matters
+                            </div>
+                            <div class="sub-text">
+                                Make the things you want to do, learn and see a part of your everyday life.
+                            </div>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </li>
+                    <li class="callout" data-index="1">
+                        <div class="icon step"></div>
+                        <div class="text">
+                            <div class="main-text">
+                                Keep taking the next step
+                            </div>
+                            <div class="sub-text">
+                                Easily plan your steps, receive reminders and get unstuck when you"re not sure what
+                                to do next.
+                            </div>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </li>
+                    <li class="callout" data-index="2">
+                        <div class="icon moment"></div>
+                        <div class="text">
+                            <div class="main-text">
+                                Beautifully capture your journey
+                            </div>
+                            <div class="sub-text">
+                                Weave together all the steps, moments, lessons, and people who"ve inspired you along
+                                the way.
+                            </div>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </li>
+                    <li class="callout" data-index="3">
+                        <div class="icon people"></div>
+                        <div class="text">
+                            <div class="main-text">
+                                Inspire and learn from others
+                            </div>
+                            <div class="sub-text">
+                                Collectively learn and be inspired by one another. Copy the steps others have taken
+                                on a similar path.
+                            </div>
+                        </div>
+                        <div class="dotted-line"></div>
+                    </li>
+                    <li class="callout last" data-index="4">
+                        <div class="icon everest"></div>
+                        <div class="text">
+                            <div class="main-text">
+                                Everyone"s got their Everest.
+                            </div>
+                            <div class="sub-text">
+                                Climb yours.
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="action-pager">
+                <li>
+                    <a class="pagenum" href="#" rel="0"></a>
+                    <a class="pagenum" href="#" rel="1"></a>
+                    <a class="pagenum" href="#" rel="2"></a>
+                    <a class="pagenum" href="#" rel="3"></a>
+                    <a class="pagenum" href="#" rel="4"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 </div>
 </body>
-<!--<script src="http://everest.wpsite.bid/js/typekit.js" type="text/javascript"></script>
-<script>
-  //<![CDATA[
-    try{
-    	Typekit.load()
-    }catch(e){}
-  //]]>
-</script>
--->
 <script src="js/launch.js" type="text/javascript"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-
 </html>

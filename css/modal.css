@@ -1,0 +1,116 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000000;
+    opacity: 0;
+}
+
+.modal-backdrop.in {
+    opacity: 0.8;
+    filter: alpha(opacity=80)
+}
+
+.modal {
+    position: fixed;
+    top: -25%;
+    left: 50%;
+    z-index: 1050;
+    width: 560px;
+    margin: -250px 0 0 -280px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.fade {
+    -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+    transition: opacity 0.3s linear, top 0.3s ease-out
+}
+
+.modal.in {
+    top: 50%;
+}
+
+.modal-header {
+    padding: 9px 15px;
+    border-bottom: 1px solid #eee
+}
+
+.modal-header .close {
+    margin-top: 2px
+}
+
+.modal-header h3 {
+    margin: 0;
+    line-height: 30px
+}
+
+.modal-body {
+    max-height: 400px;
+    padding: 15px;
+    overflow-y: auto
+}
+
+#international-modal {
+    height: 240px
+}
+
+#international-modal .modal-header {
+    border-bottom: none
+}
+
+#international-modal .modal-body .title {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 20px
+}
+
+.hide {
+    display: none
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20)
+}
+
+.close:hover {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.4;
+    filter: alpha(opacity=40)
+}
+
+@media (max-width: 480px) {
+    #international-modal {
+        width: 360px;
+        height: 260px;
+        left: 73%
+    }
+
+    #international-modal .modal-body {
+        margin-left: 40px
+    }
+}
