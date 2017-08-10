@@ -86,7 +86,7 @@ img {
     -ms-interpolation-mode: bicubic
 }
 
-.iphone-container .iphone-window .app-screenshot img {
+.app-screenshot img {
     width: 320px;
     height: 480px
 }
@@ -179,7 +179,7 @@ img {
     margin: auto;
 }
 
-.iphone-container .iphone-window {
+.iphone-window {
     margin-top: 60px;
     background-image: url("../assets/img/smartphone3.png");
     display: block;
@@ -188,7 +188,7 @@ img {
     float: left;
 }
 
-.iphone-container .iphone-window .app-screenshot {
+.iphone-window .app-screenshot {
     display: block;
     width: 320px;
     height: 480px;
@@ -280,19 +280,13 @@ img {
     }
 
     .nmain-container {
-        width: 90% !important;
-        max-width: 100%;
+        float: none;
+        display: inline-block;
+        width: auto;
         margin: 0 auto;
         height: 793px;
         overflow: hidden;
-        padding: 10px 30px;
-    }
-}
-
-@media (min-width: 780px) and (max-width: 860px) {
-    .nmain-container {
-        float: none;
-        width: 100% !important;
+        padding: 10px 0;
     }
 }
 
@@ -326,11 +320,11 @@ img {
         overflow: hidden;
     }
 
-    .iphone-container {
+    .iphone-window {
         display: none;
     }
 
-    .iphone-container .iphone-window, .slider-code {
+    .iphone-window, .slider-code {
         margin: auto;
         width: 380px;
         margin: 20px auto
@@ -371,15 +365,12 @@ img {
         overflow: hidden;
     }
 
-    .iphone-container {
+    .iphone-window {
         display: none;
-    }
-
-    .iphone-container, .iphone-container .iphone-window {
         z-index: 9999 !important
     }
 
-    .iphone-container .iphone-window, .slider-code {
+    .iphone-window, .slider-code {
         max-width: 90%;
         margin: auto
     }
