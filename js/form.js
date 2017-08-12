@@ -8,6 +8,7 @@ $(document).ready(function(){
             }
             switch(code) {
                 case '0':
+                    $('#form')[0].reset();
                     constructResult('Thanks for your feedback!', 'green');
                     $('#form').css('border-color', 'green');
                     break;
