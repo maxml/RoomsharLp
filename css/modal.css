@@ -11,7 +11,7 @@
 
 .modal-backdrop.in {
     opacity: 0.8;
-    filter: alpha(opacity=80)
+    filter: alpha(opacity=80);
 }
 
 .modal {
@@ -20,7 +20,7 @@
     left: 50%;
     z-index: 1050;
     width: 560px;
-    margin: -250px 0 0 -280px;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.3);
     -webkit-border-radius: 6px;
@@ -32,7 +32,7 @@
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
-    background-clip: padding-box
+    background-clip: padding-box;
 }
 
 .fade {
@@ -43,45 +43,42 @@
 }
 
 .modal.in {
-    top: 50%;
+    top: 40%;
 }
 
 .modal-header {
     padding: 9px 15px;
-    border-bottom: 1px solid #eee
+    border-bottom: 1px solid #eee;
 }
 
 .modal-header .close {
-    margin-top: 2px
+    margin-top: 2px;
 }
 
 .modal-header h3 {
     margin: 0;
-    line-height: 30px
+    line-height: 30px;
 }
 
 .modal-body {
-    max-height: 400px;
     padding: 15px;
-    overflow-y: auto
+    padding-top: 0;
+    overflow-y: auto;
 }
 
-#international-modal {
-    height: 240px
+.modal-header {
+    border-bottom: none;
+    overflow: hidden;
 }
 
-#international-modal .modal-header {
-    border-bottom: none
-}
-
-#international-modal .modal-body .title {
+.modal-title {
     font-size: 20px;
     font-weight: 100;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .hide {
-    display: none
+    display: none;
 }
 
 .close {
@@ -92,7 +89,7 @@
     color: #000000;
     text-shadow: 0 1px 0 #ffffff;
     opacity: 0.2;
-    filter: alpha(opacity=20)
+    filter: alpha(opacity=20);
 }
 
 .close:hover {
@@ -100,17 +97,62 @@
     text-decoration: none;
     cursor: pointer;
     opacity: 0.4;
-    filter: alpha(opacity=40)
+    filter: alpha(opacity=40);
 }
 
-@media (max-width: 480px) {
-    #international-modal {
-        width: 360px;
-        height: 260px;
-        left: 73%
-    }
+.form {
+    text-align: left;
+    padding: 20px;
+}
 
-    #international-modal .modal-body {
-        margin-left: 40px
+.input-container {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 33px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px #0000001a;
+    transition: all ease-in-out .2s;
+}
+
+.input:hover, .input:focus {
+    border-color: #34c9c6;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+.input-description {
+    resize: none;
+    height: 150px;
+}
+
+.submit {
+    display: block;
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #34c9c6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    #international-modal {
+        width: 95%;
+    }
+    .submit {
+        width: 100%;
     }
 }

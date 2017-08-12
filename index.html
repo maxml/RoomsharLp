@@ -31,9 +31,24 @@
             </a>
         </div>
         <div class="modal-body">
-            <div class="title">
+            <div class="modal-title">
                 Be the first to know when we launch in your country!
             </div>
+            <form name="form" action="mail/mail.php" method="post" class="form">
+                <div class="input-container">
+                    <label class="label">Subject:</label>
+                    <input name="subject" placeholder="Subject" type="text" class="input">
+                </div>
+                <div class="input-container">
+                    <label class="label">E-mail:</label>
+                    <input name="email" placeholder="E-mail" type="email" class="input">
+                </div>
+                <div class="input-container">
+                    <label class="label">Description:</label>
+                    <textarea name="description" placeholder="Description" id="input-description" class="input input-description"></textarea>
+                </div>
+                <input type="submit" class="submit" value="Submit">
+            </form>
         </div>
     </div>
     <div class="nsidebar">
@@ -46,9 +61,12 @@
                     Live your dreams:
                 </div>
                 <div class="download-app-container">
-                    <a href="http://everest.com/appstore" target="_new">
-                        <div class="download-app-button"></div>
-                    </a>
+                    <div class="download-container">
+                        <a class="download-app-button android" href="http://everest.com/appstore" target="_new"></a>
+                    </div>
+                    <div class="download-container">
+                        <a class="download-app-button apple" href="http://everest.com/appstore" target="_new"></a>
+                    </div>
                 </div>
             </div>
             <div class="nnav">
@@ -87,11 +105,11 @@
                 <ul class="overview">
                     <li class="callout" data-index="0">
                         <div class="icon dream"></div>
-                        <div class="text">
-                            <div class="main-text">
+                        <div class="callout-text">
+                            <div class="callout-main-text">
                                 Focus on what matters
                             </div>
-                            <div class="sub-text">
+                            <div class="callout-sub-text">
                                 Make the things you want to do, learn and see a part of your everyday life.
                             </div>
                         </div>
@@ -99,11 +117,11 @@
                     </li>
                     <li class="callout" data-index="1">
                         <div class="icon step"></div>
-                        <div class="text">
-                            <div class="main-text">
+                        <div class="callout-text">
+                            <div class="callout-main-text">
                                 Keep taking the next step
                             </div>
-                            <div class="sub-text">
+                            <div class="callout-sub-text">
                                 Easily plan your steps, receive reminders and get unstuck when you"re not sure what
                                 to do next.
                             </div>
@@ -112,11 +130,11 @@
                     </li>
                     <li class="callout" data-index="2">
                         <div class="icon moment"></div>
-                        <div class="text">
-                            <div class="main-text">
+                        <div class="callout-text">
+                            <div class="callout-main-text">
                                 Beautifully capture your journey
                             </div>
-                            <div class="sub-text">
+                            <div class="callout-sub-text">
                                 Weave together all the steps, moments, lessons, and people who"ve inspired you along
                                 the way.
                             </div>
@@ -125,27 +143,42 @@
                     </li>
                     <li class="callout" data-index="3">
                         <div class="icon people"></div>
-                        <div class="text">
-                            <div class="main-text">
+                        <div class="callout-text">
+                            <div class="callout-main-text">
                                 Inspire and learn from others
                             </div>
-                            <div class="sub-text">
+                            <div class="callout-sub-text">
                                 Collectively learn and be inspired by one another. Copy the steps others have taken
                                 on a similar path.
                             </div>
                         </div>
                         <div class="dotted-line"></div>
                     </li>
-                    <li class="callout last" data-index="4">
-                        <div class="icon everest"></div>
-                        <div class="text">
-                            <div class="main-text">
-                                Everyone"s got their Everest.
+                    <li class="callout" data-index="4">
+                        <div class="icon people"></div>
+                        <div class="callout-text">
+                            <div class="callout-main-text">
+                                Inspire and learn from others
                             </div>
-                            <div class="sub-text">
-                                Climb yours.
+                            <div class="callout-sub-text">
+                                Collectively learn and be inspired by one another. Copy the steps others have taken
+                                on a similar path.
                             </div>
                         </div>
+                        <div class="dotted-line"></div>
+                    </li>
+                    <li class="callout" data-index="5">
+                        <div class="icon people"></div>
+                        <div class="callout-text">
+                            <div class="callout-main-text">
+                                Inspire and learn from others
+                            </div>
+                            <div class="callout-sub-text">
+                                Collectively learn and be inspired by one another. Copy the steps others have taken
+                                on a similar path.
+                            </div>
+                        </div>
+                        <div class="dotted-line"></div>
                     </li>
                 </ul>
             </div>
@@ -156,12 +189,12 @@
                     <a class="pagenum" href="#" rel="2"></a>
                     <a class="pagenum" href="#" rel="3"></a>
                     <a class="pagenum" href="#" rel="4"></a>
+                    <a class="pagenum" href="#" rel="5"></a>
                 </li>
             </ul>
         </div>
     </div>
-
 </div>
-</body>
 <script src="js/launch.js" type="text/javascript"></script>
+</body>
 </html>

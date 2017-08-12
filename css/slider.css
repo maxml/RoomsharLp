@@ -1,7 +1,6 @@
 .slider-code {
-    margin-left: 34px;
     height: 145px;
-    float: left
+    float: right;
 }
 
 .viewport {
@@ -9,11 +8,11 @@
     height: 125px;
     overflow: visible;
     position: relative;
-    float: left
+    float: left;
 }
 
 .disable {
-    visibility: hidden
+    visibility: hidden;
 }
 
 .overview {
@@ -22,12 +21,12 @@
     margin: 0;
     position: absolute;
     left: 20px;
-    top: 230px
+    top: 230px;
 }
 
-.overview .pusher {
+.pusher {
     display: block;
-    height: 300px
+    height: 300px;
 }
 
 .callout[data-index='0'] .dotted-line {
@@ -35,7 +34,7 @@
     width: 86px;
     height: 12px;
     left: -102px;
-    top: 69px
+    top: 69px;
 }
 
 .callout[data-index='1'] .dotted-line {
@@ -43,7 +42,7 @@
     width: 79px;
     height: 94px;
     left: -94px;
-    top: 278px
+    top: 278px;
 }
 
 .callout[data-index='2'] .dotted-line {
@@ -51,7 +50,7 @@
     width: 82px;
     height: 54px;
     left: -97px;
-    top: 432px
+    top: 432px;
 }
 
 .callout[data-index='3'] .dotted-line {
@@ -59,13 +58,28 @@
     width: 81px;
     height: 115px;
     left: -95px;
-    top: 688px
+    top: 688px;
+}
+
+.callout[data-index='4'] .dotted-line {
+    background-image: url("../assets/img/line-screen0.png");
+    width: 86px;
+    height: 12px;
+    left: -102px;
+    top: 960px;
+}
+
+.callout[data-index='5'] .dotted-line {
+    background-image: url("../assets/img/line-screen1.png");
+    width: 79px;
+    height: 94px;
+    left: -94px;
+    top: 1220px;
 }
 
 .callout {
-    height: 155px;
     width: 306px;
-    text-align: left;
+    position: relative;
     background: #fff;
     opacity: 0.5;
     margin-bottom: 60px;
@@ -75,29 +89,19 @@
     -webkit-box-shadow: 1px 1px 1px #666;
     -moz-box-shadow: 1px 1px 1px #666;
     -o-box-shadow: 1px 1px 1px #666;
-    box-shadow: 1px 1px 1px #666
+    box-shadow: 1px 1px 1px #666;
+}
+
+.callout:after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .dotted-line {
-    display: none
+    display: none;
 }
 
-.callout.last .text {
-    text-align: center;
-    padding-left: 45px
-}
-
-.callouti.last .text .sub-text {
-    width: 215px;
-    margin-top: -10px
-}
-
-.callout.last .icon {
-    float: none;
-    left: 0px;
-    top: 0px;
-    margin: auto
-}
 
 .callout.active {
     background-color: #fff;
@@ -108,70 +112,72 @@
     display: block;
     visibility: visible;
     position: absolute;
-    z-index: 10
+    z-index: 10;
 }
 
-.callout .text {
-    float: left;
+.callout-text {
     width: 235px;
-    padding-left: 10px
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-bottom: 30px;
 }
 
-.callout .main-text {
+.callout-main-text {
     font-weight: 700;
     margin-bottom: 12px;
-    font-size: 16px
+    font-size: 16px;
 }
 
-.callout .sub-text {
-    color: #666
+.callout-sub-text {
+    color: #666;
 }
 
-.callout .icon {
+.icon {
     display: block;
     width: 36px;
     height: 36px;
     background-repeat: no-repeat;
-    position: relative;
-    float: left;
-    position: relative;
+    background-size: cover;
+    position: absolute;
     opacity: 1;
     left: -17px;
-    top: 20px
+    top: 50%;
+    margin-top: -18px;
 }
 
-.callout .icon.challenge {
-    background-image: url("../assets/img/challenge.png")
+.icon.challenge {
+    background-image: url("../assets/img/challenge.png");
 }
 
-.callout .icon.dream {
-    background-image: url("../assets/img/dream.png")
+.icon.dream {
+    background-image: url("../assets/img/dream.png");
 }
 
-.callout .icon.moment {
-    background-image: url("../assets/img/moment.png")
+.icon.moment {
+    background-image: url("../assets/img/moment.png");
 }
 
-.callout .icon.note {
-    background-image: url("../assets/img/note.png")
+.icon.note {
+    background-image: url("../assets/img/note.png");
 }
 
-.callout .icon.people {
-    background-image: url("../assets/img/people.png")
+.icon.people {
+    background-image: url("../assets/img/people.png");
 }
 
-.callout .icon.step {
-    background-image: url("../assets/img/step.png")
+.icon.step {
+    background-image: url("../assets/img/step.png");
 }
 
-.callout .icon.everest {
-    background-image: url("../assets/logomark.png")
+.icon.everest {
+    background-image: url("../assets/logomark.png");
 }
 
 .action-pager {
     margin-top: 239px;
     list-style: none;
-    float: left
+    float: left;
 }
 
 .pagenum {
@@ -182,9 +188,9 @@
     margin-bottom: 11px;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
-    border-radius: 50% !important
+    border-radius: 50% !important;
 }
 
 .pagenum.active {
-    background-color: #fff
+    background-color: #fff;
 }

@@ -26,11 +26,6 @@ body {
     overflow: hidden;
 }
 
-.download-app-container {
-    margin-top: 40px;
-    padding-bottom: 20px;
-}
-
 a {
     text-decoration: none;
     color: #959595;
@@ -51,12 +46,12 @@ a:hover, a:active {
     margin: 0 auto;
 }
 
-.international-link .notified-link {
+.notified-link {
     cursor: pointer;
     color: #34c9c6;
 }
 
-.international-link .notified-link:hover {
+.notified-link:hover {
     color: #959595;
 }
 
@@ -66,12 +61,12 @@ a:hover, a:active {
 
 ul, ol {
     padding: 0;
-    margin: 0 0 10px 25px
+    margin: 0 0 10px 25px;
 }
 
 ul {
     list-style-type: none;
-    margin-left: 0
+    margin-left: 0;
 }
 
 li {
@@ -83,19 +78,19 @@ img {
     height: auto;
     vertical-align: middle;
     border: 0;
-    -ms-interpolation-mode: bicubic
+    -ms-interpolation-mode: bicubic;
 }
 
 .app-screenshot img {
     width: 320px;
-    height: 480px
+    height: 480px;
 }
 
 .nmain {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 .nsidebar {
@@ -105,16 +100,10 @@ img {
     float: left;
     position: relative;
     background: #fff;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-top-right-radius: 5px;
-    border-top-right-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    -moz-border-bottom-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    -webkit-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
-    -moz-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
-    -o-box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
-    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
+    -o-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
+    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
 }
 
 .sidebar-content {
@@ -124,102 +113,123 @@ img {
 
 .download-block {
     position: absolute;
-    top: 30%;
+    top: 45%;
+    transform: translateY(-50%);
     width: 100%;
 }
 
 .title {
     font-weight: bold;
-    margin-top: 30px;
     letter-spacing: 1px;
     font-size: 28px;
     margin-left: 9px;
 }
 
 .nmain-container {
-    width: 67%;
+    width: 71%;
     height: 100%;
-    float: right
+    float: right;
 }
 
 .nnav {
     width: 100%;
-    padding: 30px 0;
-    margin-bottom: 40px;
-    bottom: 0px;
+    padding-bottom: 45px;
+    bottom: 0;
     position: absolute;
     background-color: #fff;
 }
 
-.nnav .links li {
-    padding-left: 8px;
-}
-
 .title-block {
-    margin-top: 25px;
+    padding-top: 25px;
 }
 
 .logo {
     position: relative;
     width: 200px;
     height: 30px;
-    padding: 0px;
+    padding: 0;
     margin: 0 auto;
-    padding-bottom: 60px;
-    background-image: url("../assets/everest-logo-large.png");
-    background-repeat: no-repeat;
+    background: url("../assets/everest-logo-large.png") no-repeat;
 }
 
-.download-app-container .download-app-button {
-    width: 229px;
-    height: 61px;
-    background-image: url("../assets/download.png");
-    display: block;
+.download-app-container {
+    margin-top: 40px;
+}
+
+.download-container {
+    width: 200px;
+    height: 58px;
     cursor: pointer;
     margin: auto;
+    padding: 5px 0;
+}
+
+.download-app-button {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: block;
+}
+
+.android {
+    background-image: url("../assets/Google_play.png");
+}
+
+.apple {
+    background-image: url("../assets/App_Store.png");
 }
 
 .iphone-window {
     margin-top: 60px;
     background-image: url("../assets/img/smartphone3.png");
-    display: block;
     width: 380px;
     height: 743px;
     float: left;
 }
 
-.iphone-window .app-screenshot {
+.app-screenshot {
     display: block;
     width: 320px;
     height: 480px;
     background-repeat: no-repeat;
     position: relative;
     top: 132px;
-    left: 32px
+    left: 32px;
 }
 
-.sub-text {
-    font-size: 12px !important
+.callout-sub-text {
+    font-size: 12px !important;
+}
+
+@media (min-width: 1350px) {
+    .slider-code {
+        margin-right: 70px !important;
+    }
 }
 
 @media (min-width: 1200px) {
-    .nsidebar {
-        overflow: hidden;
+    .iphone-window {
+        position: relative;
+        left: 30%;
+        margin-left: -190px;
     }
+    .slider-code {
+        margin-right: 40px;
+    }
+}
 
+@media (max-width: 991px) {
+    .iphone-window, .action-pager {
+        display: none;
+    }
 }
 
 /* Sidebar in top, Phone + slider = 2 columns */
-@media (min-width: 780px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     body {
         overflow: scroll;
         margin: 0;
-        padding: 0
-    }
-
-    .container-fluid {
-        padding-left: 0;
-        padding-right: 0
+        padding: 0;
     }
 
     .nsidebar {
@@ -229,54 +239,37 @@ img {
         padding-top: 10px;
     }
 
-    .logo {
-        width: 200px;
-        margin: 10px 20px;
-        padding: 10px
-    }
-
     .title {
-        font-size: 22px
+        font-size: 22px;
     }
 
     .nnav {
         max-width: 30%;
         float: right;
         position: relative;
-        margin-top: 0;
-        border-top: none
-    }
-
-    .nnav .links {
-        float: none;
-        font-size: 12px;
-    }
-
-    .nnav a {
-        position: inherit;
-        float: left
+        top: 40%;
+        transform: translateY(-50%);
+        padding-bottom: 0;
     }
 
     .title-block {
-        display: block;
         width: 30%;
         float: left;
+        padding-top: 0;
+        position: relative;
+        top: 40%;
+        margin-top: -15px;
     }
 
     .download-block {
-        display: block;
         width: 40%;
         float: left;
         position: static;
+        transform: none;
     }
 
     .download-app-container {
-        margin: 5px auto
-    }
-
-    .download-app-container .download-app-button {
-        max-width: 229px;
-        width: auto
+        margin-top: 5px;
     }
 
     .nmain-container {
@@ -290,89 +283,44 @@ img {
     }
 }
 
-/* Sidebar, Phone, slider = 1 column */
-@media (min-width: 481px) and (max-width: 779px) {
-    body {
-        overflow: scroll;
-    }
-
-    body, .nmain, .nmain-container {
-        width: 100% !important
-    }
-
-    .nsidebar {
-        overflow: auto;
-        height: 500px;
-        float: none;
-        width: 420px;
-        margin: 0 auto
-    }
-
-    .sidebar-content {
-        overflow: hidden;
-    }
-
-    .nnav {
-        margin-bottom: 0;
-    }
-
-    .nmain-container {
-        overflow: hidden;
-    }
-
-    .iphone-window {
-        display: none;
-    }
-
-    .iphone-window, .slider-code {
-        margin: auto;
-        width: 380px;
-        margin: 20px auto
-    }
-
-    .slider-code {
-        margin-left: auto;
-        float: none;
-    }
-
-    .slider-code .overview li .dotted-line {
-        display: none
-    }
-
-}
-
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     body {
         background: none;
         width: 300px;
         overflow: scroll;
     }
 
-    body, .container-fluid, .nmain, .nsidebar, .nmain-container {
-        width: 100% !important
+    body, .nmain, .nsidebar, .nmain-container {
+        width: 100% !important;
     }
 
     .nsidebar {
-        overflow: auto;
         width: 100%;
         max-width: none;
-        height: 500px;
+        height: auto;
         float: none;
         z-index: 1000;
     }
 
-    .sidebar-content {
-        overflow: hidden;
+    .download-block {
+        position: static;
+        transform: none;
+        margin-top: 30px;
     }
 
-    .iphone-window {
-        display: none;
-        z-index: 9999 !important
+    .download-app-container {
+        margin-top: 20px;
     }
 
-    .iphone-window, .slider-code {
+    .nnav {
+        position: static;
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .slider-code {
         max-width: 90%;
-        margin: auto
+        margin: auto;
     }
 
     .slider-code {
@@ -380,12 +328,12 @@ img {
         float: none;
     }
 
-    .slider-code, .slider-code .viewport, ul.overview, ul.overview {
+    .slider-code, .viewport, .overview {
         z-index: 99 !important;
     }
 
-    .slider-code .overview li .dotted-line {
-        display: none
+    .dotted-line {
+        display: none;
     }
 
     .viewport {
@@ -393,11 +341,11 @@ img {
         margin: 0 auto;
     }
 
-    ul.overview {
+    .overview {
         height: 350px !important;
     }
 
     .international-link {
-        margin-bottom: 30px
+        margin-bottom: 30px;
     }
 }
