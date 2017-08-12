@@ -8,15 +8,13 @@
     }
 
     $admin = "Barahliush@gmail.com";
-    $email_body = $description;
-    $email_body .= "\r\nFrom: ";
-    $email_body .= $email;
+    $email_body = "$description \r\nFrom: $email";
 
     $headers = "From: noreply@gmail.com\r\n";
 
-    if (mail($admin, subject, $email_body, $headers)) {
-        echo true;
+    if (mail($admin, $subject, $email_body, $headers)) {
+        echo "true";
     } else {
-        echo false;
+        echo "false";
     }
 ?>
