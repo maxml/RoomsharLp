@@ -16,8 +16,8 @@
 
 .modal {
     position: fixed;
-    top: -25%;
     left: 50%;
+    top: -50%;
     z-index: 1050;
     width: 560px;
     transform: translate(-50%, -50%);
@@ -27,6 +27,7 @@
     -moz-border-radius: 6px;
     border-radius: 6px;
     outline: none;
+    opacity: 0;
     -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
@@ -43,7 +44,8 @@
 }
 
 .modal.in {
-    top: 40%;
+    top: 50%;
+    opacity: 1;
 }
 
 .modal-header {
@@ -155,8 +157,14 @@
 }
 
 @media (max-width: 767px) {
-    #international-modal {
+    .modal {
         width: 95%;
+        transform: translate(-50%, 0);
+        top: auto;
+        margin-top: 70px;
+    }
+    .modal.in {
+        top: auto;
     }
     .submit {
         width: 100%;
