@@ -113,7 +113,7 @@ img {
 
 .download-block {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     width: 100%;
 }
@@ -219,8 +219,25 @@ img {
 }
 
 @media (max-width: 991px) {
+    .nmain-container {
+        overflow: visible !important;
+    }
+
     .iphone-window, .action-pager {
         display: none;
+    }
+
+    .viewport {
+        top: -230px;
+    }
+
+    .callout {
+        background-color: #fff;
+        opacity: 1;
+    }
+
+    .dotted-line {
+        display: none !important;
     }
 }
 
@@ -247,7 +264,7 @@ img {
         max-width: 30%;
         float: right;
         position: relative;
-        top: 40%;
+        top: 45%;
         transform: translateY(-50%);
         padding-bottom: 0;
     }
@@ -257,7 +274,7 @@ img {
         float: left;
         padding-top: 0;
         position: relative;
-        top: 40%;
+        top: 45%;
         margin-top: -15px;
     }
 
@@ -286,7 +303,6 @@ img {
 @media (max-width: 767px) {
     body {
         background: none;
-        width: 300px;
         overflow: scroll;
     }
 
@@ -319,26 +335,18 @@ img {
     }
 
     .slider-code {
-        max-width: 90%;
-        margin: auto;
-    }
-
-    .slider-code {
-        margin-left: auto;
         float: none;
+        display: inline-block;
+        max-width: 90%;
     }
 
     .slider-code, .viewport, .overview {
         z-index: 99 !important;
     }
 
-    .dotted-line {
-        display: none;
-    }
-
     .viewport {
-        float: none;
         margin: 0 auto;
+        top: -200px;
     }
 
     .overview {

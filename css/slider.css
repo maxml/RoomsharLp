@@ -186,9 +186,9 @@
     height: 13px;
     border: 2px solid #fff;
     margin-bottom: 11px;
-    -webkit-border-radius: 50% !important;
-    -moz-border-radius: 50% !important;
-    border-radius: 50% !important;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 
 .pagenum.active {
