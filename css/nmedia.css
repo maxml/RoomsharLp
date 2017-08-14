@@ -173,21 +173,11 @@ img {
 .download-app-button {
     width: 100%;
     height: 100%;
-    background-size: cover;
     display: block;
-}
-
-.android {
-    background-image: url("../assets/Google_play.png");
-}
-
-.apple {
-    background-image: url("../assets/App_Store.png");
 }
 
 .iphone-window {
     margin-top: 60px;
-    background-image: url("../assets/img/smartphone3.png");
     width: 380px;
     height: 743px;
     float: left;
