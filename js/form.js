@@ -69,11 +69,10 @@ $(document).ready(function () {
                 if (stopID) {
                     clearInterval(stopID);
                     stopID = null;
-                    slider.tinycarousel_move(1);
-                    slider.tinycarousel_start();
                     callouts.forEach(function (item) {
                         item.removeEventListener('click', blockEvent, true);
                     });
+                    slider.tinycarousel_start();
                 }
             }
             lock = false;
@@ -85,7 +84,7 @@ $(document).ready(function () {
 
 
     var resizeLines = (function () {
-        var lines = $('.jsLine');
+        var lines = $('.dotted-line');
         lines.each(function () {
             $(this).css('border-color', $(this).data('color'));
         });

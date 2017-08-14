@@ -1426,7 +1426,7 @@
             start: 1,
             display: 1,
             beforeAnimate: function (e, t) {
-                return $(".jsLine").fadeOut(1e3, function () {
+                return $(".dotted-line").fadeOut(1e3, function () {
                     return $(this).css("display", "")
                 })
             },

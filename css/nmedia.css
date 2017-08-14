@@ -202,24 +202,20 @@ img {
 }
 
 .dotted-line {
-    display: none !important;
-}
-
-.jsLine {
     display: none;
     position: absolute;
     top: 50%;
     height: 3px;
     background: transparent url("../assets/img/lineBlock.png") repeat-x;
-    z-index: 7;
+    z-index: 10;
     border-color: red;
 }
 
-.active .jsLine {
+.active .dotted-line {
     display: block;
 }
 
-.jsLine:before {
+.dotted-line:before {
     content: '';
     display: block;
     position: absolute;
@@ -239,6 +235,9 @@ img {
 }
 
 @media (min-width: 1200px) {
+    html {
+        overflow: hidden;
+    }
     .iphone-window {
         position: relative;
         left: 30%;
@@ -273,7 +272,7 @@ img {
         opacity: 1;
     }
 
-    .active .jsLine {
+    .active .dotted-line {
         display: none;
     }
 }
