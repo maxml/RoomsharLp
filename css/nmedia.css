@@ -8,7 +8,7 @@ html {
 
 body {
     width: 100%;
-    min-width: 370px;
+    min-width: 320px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -395,5 +395,20 @@ img {
 
     .international-link {
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .slider-code {
+        max-width: none;
+        display: block;
+    }
+
+    .viewport {
+        width: 100%;
+    }
+
+    .callout {
+        width: 286px;
     }
 }
