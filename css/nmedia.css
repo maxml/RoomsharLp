@@ -120,12 +120,6 @@ img {
     margin-left: 9px;
 }
 
-.nmain-container {
-    width: 71%;
-    height: 100%;
-    float: right;
-}
-
 .nnav {
     width: 100%;
     padding-bottom: 45px;
@@ -174,6 +168,13 @@ img {
     width: 100%;
     height: 100%;
     display: block;
+}
+
+.nmain-container {
+    width: 71%;
+    height: 100%;
+    float: right;
+    overflow: hidden;
 }
 
 .iphone-window {
@@ -260,7 +261,7 @@ img {
 
 @media (max-width: 991px) {
     .nmain-container {
-        overflow: visible !important;
+        overflow: visible;
     }
 
     .iphone-window, .action-pager {
@@ -335,7 +336,6 @@ img {
         width: auto;
         margin: 0 auto;
         height: 793px;
-        overflow: hidden;
         padding: 10px 0;
     }
 }
@@ -347,7 +347,7 @@ img {
     }
 
     body, .nmain, .nsidebar, .nmain-container {
-        width: 100% !important;
+        width: 100%;
     }
 
     .nsidebar {
