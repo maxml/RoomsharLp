@@ -81,11 +81,6 @@ img {
     -ms-interpolation-mode: bicubic;
 }
 
-.app-screenshot img {
-    width: 320px;
-    height: 480px;
-}
-
 .nmain {
     width: 100%;
     height: 100%;
@@ -149,7 +144,12 @@ img {
     height: 30px;
     padding: 0;
     margin: 0 auto;
-    background: url("../assets/everest-logo-large.png") no-repeat;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .download-app-container {
@@ -162,6 +162,12 @@ img {
     cursor: pointer;
     margin: auto;
     padding: 5px 0;
+}
+
+.download-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .download-app-button {
@@ -187,12 +193,19 @@ img {
     float: left;
 }
 
+.iphone-window img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
 .app-screenshot {
     display: block;
     width: 320px;
     height: 480px;
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
     top: 132px;
     left: 32px;
 }

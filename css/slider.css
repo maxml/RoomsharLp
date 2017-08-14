@@ -78,42 +78,18 @@
     display: block;
     width: 36px;
     height: 36px;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
-    opacity: 1;
     left: -17px;
     top: 50%;
     margin-top: -18px;
+    border-radius: 50%;
     z-index: 20;
 }
 
-.icon.challenge {
-    background-image: url("../assets/img/challenge.png");
-}
-
-.icon.dream {
-    background-image: url("../assets/img/dream.png");
-}
-
-.icon.moment {
-    background-image: url("../assets/img/moment.png");
-}
-
-.icon.note {
-    background-image: url("../assets/img/note.png");
-}
-
-.icon.people {
-    background-image: url("../assets/img/people.png");
-}
-
-.icon.step {
-    background-image: url("../assets/img/step.png");
-}
-
-.icon.everest {
-    background-image: url("../assets/logomark.png");
+.icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .action-pager {
