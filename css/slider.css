@@ -144,6 +144,7 @@
     left: -17px;
     top: 50%;
     margin-top: -18px;
+    z-index: 8;
 }
 
 .icon.challenge {

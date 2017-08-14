@@ -198,7 +198,38 @@ img {
 }
 
 .callout-sub-text {
-    font-size: 12px !important;
+    font-size: 12px;
+}
+
+.dotted-line {
+    display: none !important;
+}
+
+.jsLine {
+    display: none;
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    background: transparent url("../assets/img/lineBlock.png") repeat-x;
+    z-index: 7;
+    border-color: red;
+}
+
+.active .jsLine {
+    display: block;
+}
+
+.jsLine:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: -10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: inherit;
 }
 
 @media (min-width: 1350px) {
@@ -215,6 +246,12 @@ img {
     }
     .slider-code {
         margin-right: 40px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .slider-code {
+        margin-left: 34px;
     }
 }
 
@@ -236,8 +273,8 @@ img {
         opacity: 1;
     }
 
-    .dotted-line {
-        display: none !important;
+    .active .jsLine {
+        display: none;
     }
 }
 

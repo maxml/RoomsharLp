@@ -6,12 +6,12 @@ $(document).ready(function () {
                 result.text(text);
                 result.css('color', color);
             }
-
             switch (code) {
                 case '0':
-                    $('#form')[0].reset();
+                    var form = $('#form');
+                    form[0].reset();
                     constructResult('Thanks for your feedback!', 'green');
-                    $('#form').css('border-color', 'green');
+                    form.css('border-color', 'green');
                     break;
                 case '1':
                     constructResult('Please fill in all fields', 'red');
@@ -26,7 +26,6 @@ $(document).ready(function () {
                     break;
             }
         }
-
         if ($('#subject').val() && $('#email').val() && $('#input-description').val()) {
             $.ajax({
                 type: "POST",
@@ -41,18 +40,18 @@ $(document).ready(function () {
         }
         e.preventDefault();
     });
+
+
     var stopingSlider = (function () {
         var stopID;
         var lock = false;
         var slider = $('#slider-code');
         var callouts = $('.callout').toArray();
         var blockEvent = function (event) {
-            event.stopImmediatePropagation();
-            event.preventDefault();
+            event.stopPropagation();
         };
         return function () {
             if (lock) {
-                alert("lock");
                 return;
             }
             lock = true;
@@ -80,6 +79,32 @@ $(document).ready(function () {
             lock = false;
         }
     })();
+
     stopingSlider();
     $(window).resize(stopingSlider);
+
+
+    var resizeLines = (function () {
+        var lines = $('.jsLine');
+        lines.each(function () {
+            $(this).css('border-color', $(this).data('color'));
+        });
+        function resetLines(width) {
+            lines.css({
+                'width': width,
+                'left': '-' + width
+            });
+        }
+        return function () {
+            if ($(window).width() <= '1199') {
+                resetLines('124px');
+            } else {
+                var newWidth = Math.round($('#nmain-container').width() * 0.7 - 520) + 'px';
+                resetLines(newWidth.toString());
+            }
+        }
+    })();
+
+    resizeLines();
+    $(window).resize(resizeLines);
 });
