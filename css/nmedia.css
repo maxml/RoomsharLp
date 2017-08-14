@@ -398,7 +398,7 @@ img {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 359px) {
     .slider-code {
         max-width: none;
         display: block;
