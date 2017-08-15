@@ -120,6 +120,10 @@ img {
     margin-left: 9px;
 }
 
+.title-logo {
+    padding: 10px;
+}
+
 .nnav {
     width: 100%;
     padding-bottom: 45px;
@@ -134,10 +138,10 @@ img {
 
 .logo {
     position: relative;
-    width: 200px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     padding: 0;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .logo img {
@@ -319,7 +323,7 @@ img {
         padding-top: 0;
         position: relative;
         top: 50%;
-        margin-top: -15px;
+        margin-top: -55px;
     }
 
     .download-block {
