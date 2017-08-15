@@ -10,17 +10,17 @@ $(document).ready(function () {
                 case '0':
                     var form = $('#form');
                     form[0].reset();
-                    constructResult('Thanks for your feedback!', 'green');
+                    constructResult('Благодарим Вас за отзыв!', 'green');
                     form.css('border-color', 'green');
                     break;
                 case '1':
-                    constructResult('Please fill in all fields', 'red');
+                    constructResult('Пожалуйста, заполните все поля', 'red');
                     break;
                 case '2':
-                    constructResult('Please enter the correct email address', 'red');
+                    constructResult('Пожалуйста, введите правильно email', 'red');
                     break;
                 case '3':
-                    constructResult('Sorry, the request failed. Please try later', 'red');
+                    constructResult('Извините, запрос не отправлен. Пожалуйста, попробуйте позже', 'red');
                     break;
                 default:
                     break;
