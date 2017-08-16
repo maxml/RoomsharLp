@@ -1,0 +1,14 @@
+html {
+    min-height: 100%;
+    font-size: 100%;
+}
+
+body {
+    margin: 40px;
+    border: 0;
+    font-family: proxima-nova, verdana, arial, helvetica, sans-serif;
+    font-size: 1.1em;
+    text-align: left;
+    color: #0c1511;
+    line-height: 20px;
+}

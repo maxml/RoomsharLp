@@ -46,6 +46,13 @@ a:hover, a:active {
     margin: 0 auto;
 }
 
+.policy-link {
+    font-size: 16px;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .notified-link {
     cursor: pointer;
     color: #34c9c6;
