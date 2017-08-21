@@ -47,10 +47,9 @@ a:hover, a:active {
 }
 
 .policy-link {
-    font-size: 16px;
+    font-size: 12px;
     width: 200px;
     margin: 0 auto;
-    padding: 10px;
 }
 
 .notified-link {
