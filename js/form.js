@@ -7,30 +7,15 @@ $(document).ready(function () {
 
 
     (function () {
-        function showResult(formName, code) {
+        function showResult(formName, data) {
             var form = $(formName + '-form');
             var resultElement = $(formName + '-result');
-            function constructResult(text, color) {
-                resultElement.text(text);
-                resultElement.css('color', color);
-                form.css('border-color', color);
-            }
-            switch (code) {
-                case '0':
-                    form[0].reset();
-                    constructResult('Благодарим Вас за отзыв!', 'green');
-                    break;
-                case '1':
-                    constructResult('Пожалуйста, заполните все поля', 'red');
-                    break;
-                case '2':
-                    constructResult('Пожалуйста, введите правильно email', 'red');
-                    break;
-                case '3':
-                    constructResult('Извините, запрос не отправлен. Пожалуйста, попробуйте позже', 'red');
-                    break;
-                default:
-                    break;
+            var color = data.result_status ? 'green' : 'red';
+            resultElement.text(data.message);
+            resultElement.css('color', color);
+            form.css('border-color', color);
+            if (data.result_status) {
+                form[0].reset();
             }
         }
 
@@ -41,11 +26,17 @@ $(document).ready(function () {
                     url: "mail/feedbackMail.php",
                     data: $(this).serialize(),
                     success: function (data) {
-                        showResult('#feedback', data);
+                        try {
+                            showResult('#feedback', JSON.parse(data));
+                        }
+                        catch (e) {
+                            showResult('#feedback', {result_status: false, message: 'Извините, запрос не отправлен. Пожалуйста, попробуйте позже'});
+                        }
+
                     }
                 });
             } else {
-                showResult('#feedback', '1');
+                showResult('#feedback', {result_status: false, message: 'Пожалуйста, заполните все поля'});
             }
             e.preventDefault();
         });
@@ -57,11 +48,16 @@ $(document).ready(function () {
                     url: "mail/notificationMail.php",
                     data: $(this).serialize(),
                     success: function (data) {
-                        showResult('#notification', data);
+                        try {
+                            showResult('#notification', JSON.parse(data));
+                        }
+                        catch (e) {
+                            showResult('#notification', {result_status: false, message: 'Извините, запрос не отправлен. Пожалуйста, попробуйте позже'});
+                        }
                     }
                 });
             } else {
-                showResult('#notification', '1');
+                showResult('#notification', {result_status: false, message: 'Пожалуйста, заполните поле для обратной связи'});
             }
             e.preventDefault();
         });
