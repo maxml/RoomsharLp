@@ -1,17 +1,24 @@
 $(document).ready(function () {
-    $('#feedback-form').submit(function (e) {
-        function showResult(code) {
+    (function () {
+        $('#appStore-link, #other-system-link').click(function (e) {
+            return $('#notification-modal').modal('show');
+        })
+    })();
+
+
+    (function () {
+        function showResult(formName, code) {
+            var form = $(formName + '-form');
+            var resultElement = $(formName + '-result');
             function constructResult(text, color) {
-                var result = $('#feedback-result');
-                result.text(text);
-                result.css('color', color);
+                resultElement.text(text);
+                resultElement.css('color', color);
+                form.css('border-color', color);
             }
             switch (code) {
                 case '0':
-                    var form = $('#feedback-form');
                     form[0].reset();
                     constructResult('Благодарим Вас за отзыв!', 'green');
-                    form.css('border-color', 'green');
                     break;
                 case '1':
                     constructResult('Пожалуйста, заполните все поля', 'red');
@@ -26,25 +33,38 @@ $(document).ready(function () {
                     break;
             }
         }
-        if ($('#feedback-subject').val() && $('#feedback-email').val() && $('#feedback-input-description').val()) {
-            $.ajax({
-                type: "POST",
-                url: "mail/mail.php",
-                data: $(this).serialize(),
-                success: function (data) {
-                    showResult(data);
-                }
-            });
-        } else {
-            showResult('1');
-        }
-        e.preventDefault();
-    });
 
-    (function () {
-        $('#appStore-link, #other-system-link').click(function (e) {
-            return $('#notification-modal').modal('show');
-        })
+        $('#feedback-form').submit(function (e) {
+            if ($('#feedback-subject').val() && $('#feedback-email').val() && $('#feedback-input-description').val()) {
+                $.ajax({
+                    type: "POST",
+                    url: "mail/feedbackMail.php",
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        showResult('#feedback', data);
+                    }
+                });
+            } else {
+                showResult('#feedback', '1');
+            }
+            e.preventDefault();
+        });
+
+        $('#notification-form').submit(function (e) {
+            if ($('#notification-email').val()) {
+                $.ajax({
+                    type: "POST",
+                    url: "mail/notificationMail.php",
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        showResult('#notification', data);
+                    }
+                });
+            } else {
+                showResult('#notification', '1');
+            }
+            e.preventDefault();
+        });
     })();
 
 
