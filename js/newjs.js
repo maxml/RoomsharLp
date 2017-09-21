@@ -1414,8 +1414,8 @@
         })
     }, e(["assets/launch/screenshots/screenshot0.png", "assets/launch/screenshots/screenshot1.png", "assets/launch/screenshots/screenshot2.png", "assets/launch/screenshots/screenshot3.png", "assets/launch/screenshots/screenshot4.png"]), jQuery(function () {
         var e, t, n, r, i, s = this;
-        return $("#notified-link").click(function (e) {
-            return $("#international-modal").modal("show")
+        return $("#feedback-link").click(function (e) {
+            return $("#feedback-modal").modal("show")
         }), $("#slider-code").tinycarousel({
             pager: !0,
             controls: !1,

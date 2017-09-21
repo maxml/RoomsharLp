@@ -114,9 +114,9 @@ img {
 
 .download-block {
     position: absolute;
+    width: 100%;
     top: 50%;
     transform: translateY(-50%);
-    width: 100%;
 }
 
 .title {
@@ -131,10 +131,10 @@ img {
 }
 
 .nnav {
-    width: 100%;
     padding-bottom: 45px;
     bottom: 0;
     position: absolute;
+    width: 100%;
     background-color: #fff;
 }
 
@@ -157,10 +157,18 @@ img {
 }
 
 .download-app-container {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.download-container {
+.download-title {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 26px;
+    margin-left: 9px;
+}
+
+.download-app-button {
+    display: block;
     width: 200px;
     height: 58px;
     cursor: pointer;
@@ -168,16 +176,10 @@ img {
     padding: 5px 0;
 }
 
-.download-container img {
+.download-app-button img {
     display: block;
     width: 100%;
     height: 100%;
-}
-
-.download-app-button {
-    width: 100%;
-    height: 100%;
-    display: block;
 }
 
 .nmain-container {
@@ -307,7 +309,7 @@ img {
     .nsidebar {
         width: 100%;
         max-width: 100%;
-        height: 180px;
+        height: 240px;
     }
 
     .title {
@@ -315,7 +317,7 @@ img {
     }
 
     .nnav {
-        max-width: 30%;
+        width: 30%;
         float: right;
         position: relative;
         top: 50%;
@@ -324,16 +326,16 @@ img {
     }
 
     .title-block {
-        width: 30%;
+        width: 35%;
         float: left;
         padding-top: 0;
         position: relative;
         top: 50%;
-        margin-top: -55px;
+        transform: translateY(-50%);
     }
 
     .download-block {
-        width: 40%;
+        width: 35%;
         float: left;
         position: relative;
     }
@@ -354,7 +356,6 @@ img {
 
 @media (max-width: 767px) {
     body {
-        background: none;
         overflow: scroll;
     }
 

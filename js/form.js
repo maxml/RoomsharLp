@@ -1,14 +1,14 @@
 $(document).ready(function () {
-    $('#form').submit(function (e) {
+    $('#feedback-form').submit(function (e) {
         function showResult(code) {
             function constructResult(text, color) {
-                var result = $('#result');
+                var result = $('#feedback-result');
                 result.text(text);
                 result.css('color', color);
             }
             switch (code) {
                 case '0':
-                    var form = $('#form');
+                    var form = $('#feedback-form');
                     form[0].reset();
                     constructResult('Благодарим Вас за отзыв!', 'green');
                     form.css('border-color', 'green');
@@ -26,7 +26,7 @@ $(document).ready(function () {
                     break;
             }
         }
-        if ($('#subject').val() && $('#email').val() && $('#input-description').val()) {
+        if ($('#feedback-subject').val() && $('#feedback-email').val() && $('#feedback-input-description').val()) {
             $.ajax({
                 type: "POST",
                 url: "mail/mail.php",
@@ -40,6 +40,12 @@ $(document).ready(function () {
         }
         e.preventDefault();
     });
+
+    (function () {
+        $('#appStore-link, #other-system-link').click(function (e) {
+            return $('#notification-modal').modal('show');
+        })
+    })();
 
 
     var stopingSlider = (function () {
