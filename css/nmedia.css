@@ -1,15 +1,10 @@
 html {
-    min-height: 100%;
-    height: 1px;
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 
 body {
-    width: 100%;
-    min-width: 320px;
-    height: 100%;
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,7 +18,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
 }
 
 a {
@@ -54,7 +48,7 @@ a:hover, a:active {
 
 .notified-link {
     cursor: pointer;
-    color: #34c9c6;
+    color: #1f2c61;
 }
 
 .notified-link:hover {
@@ -87,24 +81,15 @@ img {
     -ms-interpolation-mode: bicubic;
 }
 
-.nmain {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .nsidebar {
-    max-width: 410px;
-    width: 29%;
-    height: 100%;
-    float: left;
-    position: relative;
-    background: #fff;
+    min-width: 320px;
+    background: none;
     -webkit-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
     -moz-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
     -o-box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
     box-shadow: 1px 0 1px rgba(0, 0, 0, 0.14);
+    position: relative;
+    z-index: 20;
 }
 
 .sidebar-content {
@@ -112,65 +97,66 @@ img {
     position: relative;
 }
 
-.download-block {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
+.title-block {
+    padding-top: 25px;
+    overflow: hidden;
+    max-width: 410px;
+    margin: 0 auto;
 }
 
-.title {
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 28px;
-    margin-left: 9px;
+.logo {
+    float: left;
+    width: 30%;
+    height: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.title-texts {
+    float: right;
+    width: 70%;
+    padding-bottom: 3px;
 }
 
 .title-logo {
     padding: 10px;
 }
 
-.nnav {
-    padding-bottom: 45px;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-    background-color: #fff;
-}
-
-.title-block {
-    padding-top: 25px;
-}
-
-.logo {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    padding: 0;
-    margin: auto;
-}
-
-.logo img {
-    display: block;
+.title-logo img {
     width: 100%;
     height: 100%;
 }
 
-.download-app-container {
-    margin-top: 20px;
+.title {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 24px;
+    margin-left: 9px;
+}
+
+.download-block {
+    margin-top: 30px;
 }
 
 .download-title {
     font-weight: bold;
     letter-spacing: 1px;
-    font-size: 26px;
+    font-size: 22px;
     margin-left: 9px;
+}
+
+.download-app-container {
+    margin-top: 10px;
 }
 
 .download-app-button {
     display: block;
-    width: 200px;
-    height: 58px;
+    width: 230px;
+    height: 67px;
     cursor: pointer;
     margin: auto;
     padding: 5px 0;
@@ -182,16 +168,31 @@ img {
     height: 100%;
 }
 
+.other-system-link-container {
+    font-size: 18px;
+}
+
+.nnav {
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.international-link {
+    margin-bottom: 30px;
+}
+
 .nmain-container {
-    width: 71%;
-    height: 100%;
-    float: right;
-    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+}
+
+.iphone-window, .action-pager {
+    display: none;
 }
 
 .iphone-window {
     position: relative;
-    margin-top: 80px;
+    margin-top: 40px;
     width: 380px;
     height: 738px;
     float: left;
@@ -214,10 +215,6 @@ img {
     left: 23px;
 }
 
-.callout-sub-text {
-    font-size: 12px;
-}
-
 .dotted-line {
     display: none;
     position: absolute;
@@ -227,10 +224,6 @@ img {
     cursor: default;
     z-index: 10;
     border-color: red;
-}
-
-.active .dotted-line {
-    display: block;
 }
 
 .dotted-line:before {
@@ -246,83 +239,32 @@ img {
     border-color: inherit;
 }
 
-@media (min-width: 1441px) {
-    .slider-code {
-        margin-right: 70px !important;
-    }
-
-    .dotted-line {
-        display: none !important;
-    }
-}
-
-@media (min-width: 1200px) {
-    html {
-        overflow: hidden;
-    }
-    .iphone-window {
-        left: 30%;
-        margin-left: -190px;
-    }
-    .slider-code {
-        margin-right: 40px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .slider-code {
-        margin-left: 34px;
-    }
-}
-
 @media (max-width: 991px) {
-    .nmain-container {
-        overflow: visible;
-    }
-
-    .iphone-window, .action-pager {
-        display: none;
-    }
-
     .viewport {
-        top: -230px;
+        height: auto !important;
+    }
+
+    .overview {
+        height: auto !important;
+        top: 30px !important;
     }
 
     .callout {
         background-color: #fff;
         opacity: 1;
     }
+}
 
-    .active .dotted-line {
-        display: none;
+@media (max-width: 329px) {
+    .callout {
+        width: 285px;
     }
 }
 
-/* Sidebar in top, Phone + slider = 2 columns */
 @media (min-width: 768px) and (max-width: 1199px) {
-    body {
-        overflow: scroll;
-        margin: 0;
-        padding: 0;
-    }
-
     .nsidebar {
-        width: 100%;
-        max-width: 100%;
+        background-color: #fff;
         height: 240px;
-    }
-
-    .title {
-        font-size: 22px;
-    }
-
-    .nnav {
-        width: 30%;
-        float: right;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        padding-bottom: 0;
     }
 
     .title-block {
@@ -334,94 +276,159 @@ img {
         transform: translateY(-50%);
     }
 
+    .title {
+        font-size: 21px;
+    }
+    .download-title {
+        font-size: 20px;
+    }
+
     .download-block {
-        width: 35%;
+        width: 40%;
         float: left;
         position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
     }
 
     .download-app-container {
         margin-top: 5px;
     }
 
-    .nmain-container {
-        float: none;
-        display: inline-block;
-        width: auto;
-        margin: 0 auto;
-        height: 793px;
-        padding: 10px 0;
-    }
-}
-
-@media (max-width: 767px) {
-    body {
-        overflow: scroll;
-    }
-
-    body, .nmain, .nsidebar, .nmain-container {
-        width: 100%;
-    }
-
-    .nsidebar {
-        width: 100%;
-        max-width: none;
-        height: auto;
-        float: none;
-        z-index: 1000;
-    }
-
-    .download-block {
-        position: static;
-        transform: none;
-        margin-top: 30px;
-    }
-
-    .download-app-container {
-        margin-top: 20px;
-    }
-
     .nnav {
-        position: static;
-        margin-top: 30px;
-        padding-bottom: 20px;
+        width: 25%;
+        float: right;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+        padding-bottom: 0;
     }
 
-    .slider-code {
-        float: none;
-        display: inline-block;
-        max-width: 90%;
-    }
-
-    .slider-code, .viewport, .overview {
-        z-index: 99 !important;
-    }
-
-    .viewport {
-        margin: 0 auto;
-        top: -200px;
-    }
-
-    .overview {
-        height: 350px !important;
-    }
-
-    .international-link {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 359px) {
-    .slider-code {
-        max-width: none;
-        display: block;
-    }
-
-    .viewport {
-        width: 100%;
+    .nmain-container {
+        background: none;
+        padding: 10px 0;
     }
 
     .callout {
-        width: 286px;
+        width: 306px;
+    }
+}
+
+@media (min-width: 992px) {
+    .nmain-container {
+        display: inline-block;
+        height: 765px;
+        overflow: hidden;
+    }
+
+    .iphone-window, .action-pager {
+        display: block;
+    }
+
+    .iphone-window {
+        float: left;
+    }
+
+    .slider-code {
+        float: right;
+        margin-left: 34px;
+
+        height: 145px;
+    }
+
+    .viewport {
+        width: 340px;
+        height: 125px;
+        float: left;
+    }
+
+    .overview {
+        position: absolute;
+    }
+
+    .callout {
+        width: 306px;
+    }
+
+    .action-pager {
+        float: left;
+    }
+
+    .active .dotted-line {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        min-height: 100%;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    body, .nmain, .nsidebar, .nmain-container {
+        height: 100%;
+    }
+
+    .nsidebar {
+        max-width: 410px;
+        width: 29%;
+        height: 100%;
+        float: left;
+        background: #fff;
+    }
+
+    .download-block {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+
+    .nnav {
+        padding-bottom: 45px;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .nmain-container {
+        width: 71%;
+        height: 100%;
+        float: right;
+        background: none;
+    }
+
+    .iphone-window {
+        left: 30%;
+        margin-left: -190px;
+    }
+
+    .slider-code {
+        margin-right: 40px;
+    }
+}
+
+@media (min-width: 1441px) {
+    .iphone-window {
+        margin-top: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .slider-code {
+        margin-right: 70px;
+    }
+
+    .overview {
+        top: 30px !important;
+    }
+
+    .active .dotted-line {
+        display: none;
     }
 }
