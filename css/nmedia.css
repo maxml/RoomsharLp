@@ -37,13 +37,11 @@ a:hover, a:active {
 
 .international-link {
     font-size: 16px;
-    width: 200px;
     margin: 0 auto;
 }
 
 .policy-link {
     font-size: 12px;
-    width: 200px;
     margin: 0 auto;
 }
 
@@ -399,6 +397,10 @@ img {
         top: 50%;
         transform: translateY(-50%);
         margin-top: 0;
+    }
+
+    .policy-link .international-link {
+        width: 200px;
     }
 
     .nnav {
