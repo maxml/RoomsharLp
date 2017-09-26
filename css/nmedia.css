@@ -253,6 +253,12 @@ img {
     }
 }
 
+@media (min-height: 850px) {
+    .iphone-window {
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 329px) {
     .callout {
         width: 285px;
@@ -451,7 +457,7 @@ img {
 
 @media (min-width: 1441px) {
     .iphone-window {
-        margin-top: 0 !important;
+        margin-top: 0;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
