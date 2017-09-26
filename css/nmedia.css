@@ -451,7 +451,7 @@ img {
 
 @media (min-width: 1441px) {
     .iphone-window {
-        margin-top: 0;
+        margin-top: 0 !important;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
