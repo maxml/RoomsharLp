@@ -399,7 +399,7 @@ img {
         margin-top: 0;
     }
 
-    .policy-link .international-link {
+    .policy-link, .international-link {
         width: 200px;
     }
 
