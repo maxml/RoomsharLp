@@ -20,6 +20,8 @@
     top: -50%;
     z-index: 1050;
     width: 560px;
+    max-height: 80%;
+    overflow-y: auto;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.3);

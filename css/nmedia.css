@@ -323,6 +323,10 @@ img {
     .callout {
         width: 306px;
     }
+
+    .modal {
+        max-height: 100%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -418,6 +422,10 @@ img {
 
     .slider-code {
         margin-right: 40px;
+    }
+
+    .modal {
+        max-height: 100%;
     }
 }
 
