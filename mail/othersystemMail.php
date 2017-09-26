@@ -11,7 +11,7 @@
 
         if (mail($admin, "Notifications", $email_body, $headers)) {
             $result["result_status"] = true;
-            $result["message"] = "Мы обязательно с вами свяжемся";
+            $result["message"] = "Мы обязательно сообщим вам, когда будет готово приложение для вашей системы";
         } else {
             $result["message"] = "Извините, запрос не отправлен. Пожалуйста, попробуйте позже";
         }

@@ -1,8 +1,11 @@
 $(document).ready(function () {
     (function () {
-        $('#appStore-link, #other-system-link').click(function (e) {
-            return $('#notification-modal').modal('show');
-        })
+        $('#appStore-link').click(function (e) {
+            return $('#appstore-modal').modal('show');
+        });
+        $('#other-system-link').click(function (e) {
+            return $('#othersystem-modal').modal('show');
+        });
     })();
 
 
@@ -41,23 +44,44 @@ $(document).ready(function () {
             e.preventDefault();
         });
 
-        $('#notification-form').submit(function (e) {
-            if ($('#notification-email').val()) {
+        $('#appstore-form').submit(function (e) {
+            if ($('#appstore-email').val()) {
                 $.ajax({
                     type: "POST",
-                    url: "mail/notificationMail.php",
+                    url: "mail/appstoreMail.php",
                     data: $(this).serialize(),
                     success: function (data) {
                         try {
-                            showResult('#notification', JSON.parse(data));
+                            showResult('#appstore', JSON.parse(data));
                         }
                         catch (e) {
-                            showResult('#notification', {result_status: false, message: 'Извините, запрос не отправлен. Пожалуйста, попробуйте позже'});
+                            showResult('#appstore', {result_status: false, message: 'Извините, запрос не отправлен. Пожалуйста, попробуйте позже'});
                         }
                     }
                 });
             } else {
-                showResult('#notification', {result_status: false, message: 'Пожалуйста, заполните поле для обратной связи'});
+                showResult('#appstore', {result_status: false, message: 'Пожалуйста, заполните поле для обратной связи'});
+            }
+            e.preventDefault();
+        });
+
+        $('#othersystem-form').submit(function (e) {
+            if ($('#othersystem-email').val()) {
+                $.ajax({
+                    type: "POST",
+                    url: "mail/othersystemMail.php",
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        try {
+                            showResult('#othersystem', JSON.parse(data));
+                        }
+                        catch (e) {
+                            showResult('#othersystem', {result_status: false, message: 'Извините, запрос не отправлен. Пожалуйста, попробуйте позже'});
+                        }
+                    }
+                });
+            } else {
+                showResult('#othersystem', {result_status: false, message: 'Пожалуйста, заполните поле для обратной связи'});
             }
             e.preventDefault();
         });
