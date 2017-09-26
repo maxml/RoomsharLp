@@ -96,7 +96,7 @@ img {
 }
 
 .title-block {
-    padding-top: 25px;
+    padding: 25px 18px 0 18px;
     overflow: hidden;
     max-width: 330px;
     margin: 0 auto;
@@ -268,7 +268,7 @@ img {
     .title-block {
         width: 30%;
         float: left;
-        padding-top: 0;
+        padding: 0;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -343,7 +343,7 @@ img {
 @media (min-width: 992px) {
     .nmain-container {
         display: inline-block;
-        height: 765px;
+        height: 805px;
         overflow: hidden;
     }
 
@@ -405,7 +405,8 @@ img {
     }
 
     .title-block {
-        padding: 60px 15px 0 15px;
+        max-width: 380px;
+        padding-top: 60px;
     }
 
     .download-block {

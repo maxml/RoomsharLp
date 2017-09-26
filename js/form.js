@@ -1,5 +1,11 @@
 $(document).ready(function () {
     (function () {
+        if ($(window).height() >= '850') {
+            $('#iphone-window').css('margin-top', '80px');
+        }
+    })();
+
+    (function () {
         $('#appStore-link').click(function (e) {
             return $('#appstore-modal').modal('show');
         });
