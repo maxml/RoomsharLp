@@ -97,43 +97,13 @@ img {
 
 .title-block {
     padding: 25px 18px 0 18px;
-    overflow: hidden;
     max-width: 330px;
     margin: 0 auto;
-}
-
-.logo {
-    float: left;
-    width: 24%;
 }
 
 .logo img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: right top;
-}
-
-.title-texts {
-    float: left;
-    width: 76%;
-    padding-bottom: 3px;
-}
-
-.title-logo {
-    padding: 5px;
-}
-
-.title-logo img {
-    width: 100%;
-    height: 100%;
-}
-
-.title {
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 22px;
-    margin-left: 9px;
 }
 
 .download-block {
@@ -280,28 +250,8 @@ img {
         transform: translateY(-50%);
     }
 
-    .logo {
-        width: 30%;
-        height: 80px;
-    }
-
-    .title-texts {
-        width: 70%;
-    }
-
-    .title {
-        font-size: 20px;
-    }
-
-    @media (max-width: 991px) {
-        .title-block {
-            padding-left: 18px;
-        }
-
-        .title {
-            font-size: 17px;
-            margin-left: 7px;
-        }
+    .title-block {
+        padding-left: 20px;
     }
 
     .download-title {
