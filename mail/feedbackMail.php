@@ -7,7 +7,7 @@
 
     if ($subject !== "" && $email !== "" && $description !== "") {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $admin = "Barahliush@gmail.com";
+            $admin = "roomshar4you@gmail.com";
             $email_body = "$description \r\nFrom: $email";
 
             $headers = "From: noreply@gmail.com\r\n";

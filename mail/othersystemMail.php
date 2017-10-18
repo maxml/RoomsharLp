@@ -4,7 +4,7 @@
     $result = array ("result_status"=>false,"message"=>"");
 
     if ($email !== "") {
-        $admin = "Barahliush@gmail.com";
+        $admin = "roomshar4you@gmail.com";
         $email_body = "$email";
 
         $headers = "From: noreply@gmail.com\r\n";
